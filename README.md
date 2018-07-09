@@ -108,7 +108,7 @@ const Car = {
 
 ## Destructuring
 
-- [implementation](./destructuring.js)
+- [Practical examples](./destructuring.js)
 
 ## Classes
 
@@ -185,6 +185,8 @@ for (let color of colors){ // loop through array
 
 ## Array API
 
-- 'values' in array.Prototype // false
-- 'keys' in array.Prototype // true
- 
+[Array api examples](./arrayAPI.js)
+
+- `'values' in array.Prototype` // false
+- `'keys' in array.Prototype` // true 
+
