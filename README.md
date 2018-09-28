@@ -147,6 +147,22 @@ for (const digit of digits) {
 ## Rest and spread
 
 - Main goal is to write less code
+- Helpful in below situations:
+```js
+// when assigning the values of an array to variables
+    const nums = [1,2,3,5]
+    const [she, he, they, unknown] = nums
+
+// when working with variadic functions
+function sum(...nums){
+    let total = 0;
+    for (const n of nums){
+        total += num;
+    }
+    return total;
+}
+```
+
 
 ## Destructuring
 
