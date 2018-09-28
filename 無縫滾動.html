@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        window.onload = () => {
+            let oDiv = document.getElementById('div1');
+            let oUI = oDiv.getElementsByTagName('ui')[0];
+            let aLi = oUI.getElementsByTagName('li');
+
+            let speed = -2;
+
+            oUI.innerHTML += oUI.innerHTML;
+            oUI.style.width = aLi[0].offsetWidth*aLi.length+'px';
+
+            let move  = () => {
+                if(oUI.offsetLeft < -oUI.offsetWidth/2){
+                    oUI.style.left = '0';
+                }
+                if(oUI.offsetLeft>0){
+                    oUI.style.left = -oUI.offsetWidth/2 + 'px';
+                }
+                oUI.style.left = oUI.offsetLeft-2+'px';
+            }
+
+            let timer = setInterval(move, 30);
+
+            oDiv.onmouseover = () => {
+                clearInterval(timer);
+            };
+            oDiv.onmouseout= () => {
+                timer = setInterval(move, 30);
+            }
+
+            document.getElementsByTagName('a')[0].onclick = () => {
+                speed = -4;
+            }
+            document.getElementsByTagName('a')[0].onclick = () => {
+                speed = 4;
+            }
+        };
+
+    </script>
+
+    <a href="">left</a>
+    <a href="">right</a>
+
+    <div id="div1">
+        <ul>
+            <li><img src="" alt=""></li>
+            <li><img src="" alt=""></li>
+            <li><img src="" alt=""></li>
+            <li><img src="" alt=""></li>
+            <li><img src="" alt=""></li>
+
+        </ul>
+    </div>
+
+</body>
+</html>

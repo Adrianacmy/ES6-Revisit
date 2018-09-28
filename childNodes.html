@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        window.onload = () => {
+
+            let a = document.getElementsByTagName('a');
+            for(let i=0; i<a.length; i++){
+                a[i].onclick = () => {
+                   this.parentNode.style.display = None;
+                }
+            }
+        }
+
+        //nodeType == 3, 文本節點
+        // nodeType == 1 元素節點
+        let ul = document.getElementById('ul1');
+        for (let i = 0; i < ul.childNodes.length; i++) {
+            if (ul.childNodes[i].nodeType == 1) {
+                ul.childNodes[i].style.background = 'red';
+            }
+        }
+
+
+        // children
+        // ul.children: will ignore text nodes
+
+
+        // parentNode
+        // offsetParent(https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetParent)
+
+
+    </script>
+
+    <ul id="ul1">
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+    </ul>
+</body>
+
+</html>

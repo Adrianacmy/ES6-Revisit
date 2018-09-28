@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // tBodies, tHead, tFoot, rows, cells
+        //tBodies excludes th
+
+        window.onload = () => {
+            let tab = document.querySelector('table');
+            //alert(tab.tBodies[0].rows[1].getElementsByTagName('td')[1].innerHTML)
+
+            let oldStyle = '';
+
+            for (let i = 0; i < tab.tBodies[0].rows.length; i++) {
+
+                tab.tBodies[0].rows[i].onmouseover = function () {
+                    oldStyle = this.style.background;
+                    this.style.background = 'pink';
+                };
+
+                tab.tBodies[0].rows[i].onmouseout = function () {
+                    this.style.background = oldStyle;
+                };
+
+                if (i % 2) {
+                    tab.tBodies[0].rows[i].style.background = 'grey';
+                } else {
+                    tab.tBodies[0].rows[i].style.background = '';
+                }
+
+            }
+
+            //search
+            let arr = str.split(' ')
+            btn.onclick = () => {
+                
+            }
+
+        }
+
+
+
+
+
+    </script>
+    <input type="text" name='q'><button >search</button>
+    <table>
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>name</td>
+                <th>group</td>
+            </tr>
+
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>cherry</td>
+                <td>admin</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>cherry</td>
+                <td>admin</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>cherry</td>
+                <td>admin</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>cherry</td>
+                <td>admin</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>

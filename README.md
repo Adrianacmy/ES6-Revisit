@@ -64,7 +64,7 @@ const team = {
 //
 const profile = {
     name: 'Alex',
-    getName: function(){ return this.name;} 
+    getName: function(){ return this.name;}
     // in this case, fat arrow dosenot work well, this reference outer level of profile which is Window
 };
 
@@ -80,7 +80,7 @@ const canvasDimensions = function(width, initialHeight) {
     // height: height
     width,
     height
-    // when key and value are the same, spedify one is ok
+    // when key and value are the same, specify one is ok
   };
 }
 
@@ -104,7 +104,7 @@ const Car = {
 
 ## Rest and spread
 
-- Main goal is to write less code 
+- Main goal is to write less code
 
 ## Destructuring
 
@@ -121,6 +121,9 @@ for (let color of colors){ // loop through array
 
 
 ```
+
+## [Set](./set.js)
+
 
 ## Generator(*)
 
@@ -171,13 +174,13 @@ for (let color of colors){ // loop through array
   - executes a search for a match between a regular expression and this String object.
   - If a non-RegExp object obj is passed, it is implicitly converted to a RegExp by using new RegExp(obj).
   - return the index of first match or -1
-  
+
 - arr.indexOf(searchElement[, fromIndex])
   - fromIndex: The index to start the search at
   - returns the first index at which a given element can be found in the array, or -1 if it is not present.
 
 - str.includes(searchString[, position])
-  - determines whether one string may be found within another string, 
+  - determines whether one string may be found within another string,
   - returning true or false.
   - position: The position within the string at which to begin searching for searchString. (defaults to 0).
 
@@ -188,5 +191,17 @@ for (let color of colors){ // loop through array
 [Array api examples](./arrayAPI.js)
 
 - `'values' in array.Prototype` // false
-- `'keys' in array.Prototype` // true 
+- `'keys' in array.Prototype` // true
 
+## JS foundation
+
+- [getComputedStyle](./getComputedStyle.html)
+- [無縫滾動](./無縫滾動.html)
+- [offsetParent](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetParent)
+- getAttribute()
+- setAttribute()
+- removeAttribute()
+- [firstChild, firstElementChild](./firstChild.html) 處理兼容
+- [createElement](./createElement.html), appendChild, insertBefore, removeChild
+
+- [table](./table.html)
