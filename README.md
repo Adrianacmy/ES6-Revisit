@@ -31,48 +31,8 @@ Personal notes
  // Embedded expressions inside template literals can do more than just reference variables. You can perform operations, call functions and use loops inside embedded expressions!
 ```
 
-## Fat arrow
+## [Fat arrow and this](./fatarrow&this.js)
 
-```javascript
-const add = (a, b) => a + b
-
-const double = c => c * 2
-
-const something = () => 3
-
-const numbers = [1,2,5,6,7]
-numbers.map( n => n ** 2);
-
-
-const team = {
-  members : ['a', 'b'],
-  teamName: 'super team',
-  // teamSummary: funciton(){
-  //   return this.members.map(function(member){
-  //     return `${member} is on this them ${this.teamName}`;
-  // the last this is bind to somewhere call map function
-  //   });
-
-  // fat arrow
-  teamSummary: function(){
-    this.members.map(member => {
-      return `${member} is on the team ${this.teamName}`
-      // this reference the outer level of map which is team
-    });
-  }
-
-  }
-};
-
-
-//
-const profile = {
-    name: 'Alex',
-    getName: function(){ return this.name;}
-    // in this case, fat arrow dosenot work well, this reference outer level of profile which is Window
-};
-
-```
 
 ## Enhanced Object literal or Object literal shorthand
 
