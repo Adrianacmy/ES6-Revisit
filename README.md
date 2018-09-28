@@ -102,8 +102,6 @@ for (const digit of digits) {
 
 ```
 
-## Default funciton argumnets
-
 ## Rest and spread
 
 - Main goal is to write less code
@@ -124,7 +122,7 @@ function sum(...nums){
 ```
 
 
-## Destructuring
+## Defaults and Destructuring
 
 - [Practical examples](./destructuring.js)
 

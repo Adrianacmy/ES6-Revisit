@@ -1,3 +1,59 @@
+
+// combine default function and destructuring
+function createGrid([width = 5, height = 5]) {
+    return `Generates a ${width} x ${height} grid`;
+  }
+
+  createGrid([]); // Generates a 5 x 5 grid
+  createGrid([2]); // Generates a 2 x 5 grid
+  createGrid([2, 3]); // Generates a 2 x 3 grid
+  createGrid([undefined, 3]); // Generates a 5 x 3 grid
+  createGrid(); // throws an error
+  // createGrid() expects an array to be passed in that it will then destructure. Since the function was called without passing an array, it breaks. But, we can use default function parameters for this!
+  function createGrid([width = 5, height = 5] = []) {
+    return `Generates a ${width} x ${height} grid`;
+  }
+  createGrid(); // Generates a 5 x 5 grid
+
+/////////////////////////////////////////////////////////////////////
+
+// an object be a default parameter and use object destructuring
+
+function createSundae({scoops = 1, toppings = ['Hot Fudge']}) {
+    const scoopText = scoops === 1 ? 'scoop' : 'scoops';
+    return `Your sundae has ${scoops} ${scoopText} with ${toppings.join(' and ')} toppings.`;
+  }
+
+  createSundae({}); // Your sundae has 1 scoop with Hot Fudge toppings.
+  createSundae({scoops: 2}); // Your sundae has 2 scoops with Hot Fudge toppings.
+  createSundae({scoops: 2, toppings: ['Sprinkles']}); // Your sundae has 2 scoops with Sprinkles toppings.
+  createSundae({toppings: ['Cookie Dough']}); // Your sundae has 1 scoop with Cookie Dough toppings.
+
+  createSundae(); // throws an error
+
+
+  function createSundae({scoops = 1, toppings = ['Hot Fudge']} = {}) {
+      const scoopText = scoops === 1 ? 'scoop' : 'scoops';
+      return `Your sundae has ${scoops} ${scoopText} with ${toppings.join(' and ')} toppings.`;
+    }
+    createSundae(); // Your sundae has 1 scoop with Hot Fudge toppings.
+
+/////////////////////////////////////////////////////////////////////
+
+// Array defaults vs. object defaults
+function createSundae([scoops = 1, toppings = ['Hot Fudge']] = []) { … }
+// If you wish to use default value for scoops but change toppings, have to call the function as below:
+createSundae([undefined, ['Hot Fudge', 'Sprinkles', 'Caramel']]);
+
+// Since arrays are positionally based, have to pass undefined to "skip" over the first argument (and accept the default) to get to the second argument.
+
+//nless you've got a strong reason to use array defaults with array destructuring, we going with object defaults with object destructuring is recommended
+
+
+/////////////////////////////////////////////////////////////////////
+
+
+
 // The destructuring assignment syntax is a JavaScript expression that makes it possible to unpack values from arrays, or properties from objects, into distinct variables.
 
 // destructuring properties user {}
@@ -8,7 +64,7 @@ const expense = {
   ammount: 7895
 }
 
-// declare a varable named type and ammount and  ssign the value of expense.type and expense.amount to them
+// declare a varable named type and ammount and assign the value of expense.type and expense.amount to them
 const {type, ammount} = expense
 // if destructuring any value if not in expense, undefined return
 
