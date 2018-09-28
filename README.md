@@ -6,6 +6,10 @@ Personal notes
 
 - It is a standard, Javascript is the implementation
 
+## [Ecma International](http://www.ecma-international.org/memento/index.html)
+
+## [ES6 spec](http://www.ecma-international.org/ecma-262/6.0/index.html)
+
 ## Array helpers
 
 - [arr.forEach(callback)](./forEach.js)
@@ -15,6 +19,11 @@ Personal notes
 - [arr.some()](./everySome.js)
 - [arr.every(): use case: validate user input form](./everySome.js)
 - [arr.reduce(callback[, init value)]](./reduce.js)
+
+## [Array API](./arrayAPI.js)
+
+- `'values' in array.Prototype` // false
+- `'keys' in array.Prototype` // true
 
 ## Let and const
 
@@ -31,7 +40,7 @@ Personal notes
  // Embedded expressions inside template literals can do more than just reference variables. You can perform operations, call functions and use loops inside embedded expressions!
 ```
 
-## [Fat arrow and this](./fatarrow&this.js)
+## [Fat arrow and `this`](./fatarrow&this.js)
 
 
 ## Enhanced Object literal or Object literal shorthand
@@ -122,27 +131,15 @@ function sum(...nums){
 ```
 
 
-## Defaults and Destructuring
+## [Defaults and Destructuring](./destructuring.js)
 
-- [Practical examples](./destructuring.js)
+## [Classes](./classes.js)
 
-## Classes
+## [Set and WeakSet](./set-weakSet.js)
 
-```javascript
-// for in/of
-const colors = ['red', 'blue', 'yellow'];
-for (let color of colors){ // loop through array
-  console.log(color);
-}
+## [Map and WeakMap](./map-weakmap.js)
 
-
-```
-
-## [Set](./set.js)
-
-
-## Generator(*)
-
+## [Generator(*)](./generator.js)
 - A function can be enter and exit mutiple times
 
 ```javascript
@@ -153,7 +150,7 @@ for (let color of colors){ // loop through array
 
 ```
 
-## Promises
+## [Promises]('./promise.js) ??
 
 - status
   - pending
@@ -161,6 +158,19 @@ for (let color of colors){ // loop through array
   - rejected.catch()
 - fetch(url)
 
+
+## [Proxies](./proxies.js)  ??
+
+## [Polyfill](./polyfill.js), [read more](https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills)
+
+## transpiler vs compiler
+- transpiler: a subset of compiler, source code and target code are on the same level of abstraction and human readable
+- compiler: source code to machine code
+
+## Babel
+- [Babel's REPL](https://babeljs.io/repl/#?babili=false&evaluate=true&lineWrap=false&presets=es2015)
+- [Full list Babel's plugins](https://babeljs.io/docs/en/plugins/)
+- [ ES2015 preset that is a collection of all the plugins we'll need to convert all of our ES6 code to ES5.](https://babeljs.io/docs/en/babel-preset-es2015/)
 
 ## String API
 
@@ -202,14 +212,8 @@ for (let color of colors){ // loop through array
 
   - 'soemthing '.repeat(3).trim()
 
-## Array API
 
-[Array api examples](./arrayAPI.js)
-
-- `'values' in array.Prototype` // false
-- `'keys' in array.Prototype` // true
-
-## JS foundation
+## JS practical examples
 
 - [getComputedStyle](./getComputedStyle.html)
 - [無縫滾動](./無縫滾動.html)

@@ -41,7 +41,7 @@ function createSundae({scoops = 1, toppings = ['Hot Fudge']}) {
 /////////////////////////////////////////////////////////////////////
 
 // Array defaults vs. object defaults
-function createSundae([scoops = 1, toppings = ['Hot Fudge']] = []) { … }
+function createSundae([scoops = 1, toppings = ['Hot Fudge']] = []) { }
 // If you wish to use default value for scoops but change toppings, have to call the function as below:
 createSundae([undefined, ['Hot Fudge', 'Sprinkles', 'Caramel']]);
 
