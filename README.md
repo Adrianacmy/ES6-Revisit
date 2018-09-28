@@ -25,6 +25,10 @@ Personal notes
 
 ```javascript
  `${5+9} soemthing`
+
+// template literals also preserve newlines as part of the string
+
+ // Embedded expressions inside template literals can do more than just reference variables. You can perform operations, call functions and use loops inside embedded expressions!
 ```
 
 ## Fat arrow
