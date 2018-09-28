@@ -111,6 +111,37 @@ const Car = {
 
 ```
 
+## For loop families
+```js
+// Both for...in and for...of statements iterate over something. The main difference between them is in what they iterate over.
+
+// The for...in statement iterates over the enumerable properties of an object, in an arbitrary order.
+
+// The for...of statement iterates over data that iterable object defines to be iterated over.
+
+
+const digits = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+for (let i = 0; i < digits.length; i++) {
+  console.log(digits[i]);
+}
+
+for (const index in digits) {
+  console.log(digits[index]);
+}
+// above two have keep tracking a few things
+// forEach(callback) only works with array
+
+
+// The for...of statement creates a loop iterating over iterable objects, including: built-in String, Array, Array-like objects (e.g., arguments or NodeList), TypedArray, Map, Set, and user-defined iterables
+
+for (const digit of digits) {
+  console.log(digit);
+}
+// for...of loop almost exactly like you would write a for...in loop, except you swap out in with of and you can drop the index.
+
+```
+
 ## Default funciton argumnets
 
 ## Rest and spread
