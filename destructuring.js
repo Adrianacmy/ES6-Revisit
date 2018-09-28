@@ -8,8 +8,8 @@ const expense = {
   ammount: 7895
 }
 
-// declare a varable named type and ammount and  ssign the value of expense.type and expense.amount to them 
-const {type, ammount} = expense 
+// declare a varable named type and ammount and  ssign the value of expense.type and expense.amount to them
+const {type, ammount} = expense
 // if destructuring any value if not in expense, undefined return
 
 // example
@@ -38,6 +38,9 @@ const [c1, c2,...rest] = corps;
 document.write(c1, '<br>')
 document.write(c2, '<br>')
 document.write(rest, '<br>')
+
+let [first, second, third] = corps;
+console.log(first, second) // google, facebook
 
 
 
@@ -118,9 +121,9 @@ const classesAsObject = classes.map( ([subject, time, teacher]) => {
 
 
 
-// destructuring with recursion without any arr helper 
+// destructuring with recursion without any arr helper
 // input example [1,2,5,6]
-// output [2,4,10,12] 
+// output [2,4,10,12]
 
 const numbers = [1, 2, 3];
 

@@ -74,9 +74,11 @@ const profile = {
 
 ```
 
-## Enhanced Object literal
+## Enhanced Object literal or Object literal shorthand
 
 ```javascript
+//  remove those duplicate variables names from object properties _if_ the properties have the same name as the variables being assigned to them.
+
 const canvasDimensions = function(width, initialHeight) {
   const height = initialHeight * 9 /16;
   return {
@@ -100,6 +102,11 @@ const Car = {
   getColor: function() {
     return this.color;
   }
+    // only need to reference the car's getColor property in order to call the function, having the function keyword is redundant, so it can be dropped.
+    getColor(){
+        return this.color;
+    }
+
 };
 
 ```
